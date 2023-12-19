@@ -1,0 +1,13 @@
+cluster_name                   = "tooling_app_eks"
+iac_environment_tag            = "development"
+name_prefix                    = "${var.cluster_name}-elb-sl-role-creation"
+main_network_block             = "10.0.0.0/16"
+subnet_prefix_extension        = 4
+zone_offset                    = 8
+admin_users                    = ["dare", "solomon"]
+developer_users                = ["leke", "david"]
+asg_instance_types             = ["t3.small", "t2.small"]
+autoscaling_minimum_size_by_az = 1
+autoscaling_maximum_size_by_az = 10
+autoscaling_average_cpu        = 30
+kubernetes_version             = "1.28"
